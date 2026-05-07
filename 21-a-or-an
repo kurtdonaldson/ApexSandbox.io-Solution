@@ -1,6 +1,10 @@
 public String aOrAn(String word) {
     //code here
-    if(word.toLowerCase().startsWith('a')){
+    if(word.startsWithIgnoreCase('a') ||
+        word.startsWithIgnoreCase('e') ||
+        word.startsWithIgnoreCase('i') ||
+        word.startsWithIgnoreCase('o') ||
+        word.startsWithIgnoreCase('u')  ){
         return 'an ' + word;
     }else{
         return 'a ' + word;
