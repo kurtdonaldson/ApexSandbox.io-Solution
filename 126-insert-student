@@ -1,8 +1,8 @@
 public Id insertStudent(String name, String email) {
     // code here
-    apxio_Student__c newStudent = new apxio_Student__c ();
+    apxio__Student__c newStudent = new apxio__Student__c ();
     newStudent.name = name;
-    newStudent.apxio_Email__c = email;
+    newStudent.apxio__Email__c = email;
 
     System.debug('Attempting to insert student: ' + newStudent);
 
@@ -12,7 +12,7 @@ public Id insertStudent(String name, String email) {
     System.debug('An error has occurred when inserting: ' + e.getMessage());
     }
 
-    apxio_Student__c insertedStudent = [SELECT id, name FROM apxio_Student__c WHERE name = :name];
+    apxio_Student__c insertedStudent = [SELECT id, name FROM apxio__Student__c WHERE name = :name];
 
     System.debug('Inserted student: ' + insertedStudent);
 
