@@ -12,11 +12,11 @@ public Id insertStudent(String name, String email) {
     System.debug('An error has occurred when inserting: ' + e.getMessage());
     }
 
-    apxio_Student__c insertedStudent = [SELECT id, name FROM apxio__Student__c WHERE name = :name];
+    // apxio_Student__c insertedStudent = [SELECT id, name FROM apxio__Student__c WHERE name = :name];
 
-    System.debug('Inserted student: ' + insertedStudent);
+    // System.debug('Inserted student: ' + insertedStudent);
 
-    return insertedStudent.id;
+    // return insertedStudent.id;
 
     
 }
