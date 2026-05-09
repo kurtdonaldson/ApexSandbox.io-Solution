@@ -1,22 +1,17 @@
 public Id insertStudent(String name, String email) {
     // code here
     apxio__Student__c newStudent = new apxio__Student__c();
-    // newStudent.name = name;
-    // newStudent.apxio__Email__c = email;
+    newStudent.name = name;
+    newStudent.apxio__Email__c = email;
 
-    // System.debug('Attempting to insert student: ' + newStudent);
 
-    // try{
-    //     insert newStudent;
-    // } catch(DmlException e) {
-    // System.debug('An error has occurred when inserting: ' + e.getMessage());
-    // }
+    try{
+        insert newStudent;
+        return newStudent.id;
+    } catch(DmlException e) {
+    System.debug('An error has occurred when inserting: ' + e.getMessage());
+    }
 
-    // apxio_Student__c insertedStudent = [SELECT id, name FROM apxio__Student__c WHERE name = :name];
-
-    // System.debug('Inserted student: ' + insertedStudent);
-
-    // return insertedStudent.id;
-
-    
+    return null;
+   
 }
