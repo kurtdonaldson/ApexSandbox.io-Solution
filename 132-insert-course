@@ -1,0 +1,18 @@
+public Id insertCourse(String name, String details, Integer credits) {
+    // code here
+    apxio__Course__c newCourse = new apxio__Course__c();
+    newCourse.name = name;
+    newCourse.apxio__Course_Details__c = details;
+    newCourse.apxio__Credits__c = credits;
+
+    try{
+        insert newCourse;
+        return newCourse.id;
+
+    }catch(DmlException e) {
+        System.debug('An unexpected error has occurred: ' + e.getMessage());
+    }
+
+
+    return null;
+}
