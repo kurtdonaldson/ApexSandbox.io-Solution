@@ -7,6 +7,10 @@ public static List<Integer> squareList(List<Integer> nums){
         results.add(n * n);
     }
 
+    results.sort();
+
+
+
 
 
 
